@@ -14,11 +14,11 @@ const ElevationCard = () => {
                     <tbody>
                         <tr>
                             <td className="w-2/3 font-medium">Latitude:</td>
-                            <td>{coordinates.lat.toPrecision(5)}°</td>
+                            <td id="latitude">{coordinates.lat.toPrecision(5)}°</td>
                         </tr>
                         <tr>
                             <td className="w-2/3 font-medium">Longitude:</td>
-                            <td>{coordinates.lng.toPrecision(5)}°</td>
+                            <td id="longitude">{coordinates.lng.toPrecision(5)}°</td>
                         </tr>
                         <tr>
                             <td className="w-1/3 font-medium">Elevation:</td>
@@ -28,7 +28,7 @@ const ElevationCard = () => {
                                 ) : elevation ? (
                                     <span>{elevation} m.</span>
                                 ) : (
-                                    <span className="w-2/3">Not in the dataset</span>
+                                    <span id="elevation" className="w-2/3">Not in the dataset</span>
                                 )}
                             </td>
                         </tr>

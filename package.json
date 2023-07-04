@@ -6,7 +6,8 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "cypress": "cypress open"
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.3.1",
@@ -27,6 +28,7 @@
     "@typescript-eslint/eslint-plugin": "^5.59.6",
     "@typescript-eslint/parser": "^5.59.6",
     "autoprefixer": "^10.4.14",
+    "cypress": "^12.16.0",
     "eslint": "^8.40.0",
     "eslint-config-next": "^13.4.2",
     "postcss": "^8.4.21",
