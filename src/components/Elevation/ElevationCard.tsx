@@ -14,23 +14,22 @@ const ElevationCard = () => {
                     <tbody>
                         <tr>
                             <td className="w-2/3 font-medium">Latitude:</td>
-                            <td id="latitude">{coordinates.lat.toPrecision(5)}°</td>
+                            <td id="latitude" data-testid="latitude">{coordinates.lat.toPrecision(5)}°</td>
                         </tr>
                         <tr>
                             <td className="w-2/3 font-medium">Longitude:</td>
-                            <td id="longitude">{coordinates.lng.toPrecision(5)}°</td>
+                            <td id="longitude" data-testid="longitude">{coordinates.lng.toPrecision(5)}°</td>
                         </tr>
                         <tr>
                             <td className="w-1/3 font-medium">Elevation:</td>
-                            <td>
-                                {isLoading ? (
-                                    <span>Loading...</span>
-                                ) : elevation ? (
-                                    <span>{elevation} m.</span>
-                                ) : (
-                                    <span id="elevation" className="w-2/3">Not in the dataset</span>
-                                )}
-                            </td>
+
+                            {isLoading ? (
+                                <td id="elevation" data-testid="elevation" className="w-2/3">Loading...</td>
+                            ) : elevation ? (
+                                <td id="elevation" data-testid="elevation" className="w-2/3">{elevation} m.</td>
+                            ) : (
+                                <td id="elevation" data-testid="elevation" className="w-2/3">Not in the dataset</td>
+                            )}
                         </tr>
                     </tbody>
                 </table>

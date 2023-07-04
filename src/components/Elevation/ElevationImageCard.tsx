@@ -9,7 +9,7 @@ const ElevationImageCard = () => {
     const offset = 4;
     const maxElevation = 9000;
     const currentElevation = elevation || 0;
-    const redLinePosition = ((currentElevation / maxElevation) * 100 || 0) + offset;
+    const redLinePosition = (((currentElevation / maxElevation) * 100 || 0) + offset).toPrecision(3);
 
     return (
         <div className="flex flex-col items-center space-y-4 mt-6">
@@ -19,7 +19,7 @@ const ElevationImageCard = () => {
                     <img src="/elevationGraph.png" alt="logo" />
                     {!isLoading && (
                         <>
-                            <div
+                            <div data-testid="red-line"
                                 style={{
                                     position: "absolute",
                                     bottom: `${redLinePosition}%`,
